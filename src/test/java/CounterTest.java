@@ -35,5 +35,15 @@ public class CounterTest {
 			assertEquals(testCounter.getCount(), i * -1);
 		}
 	}
+	
+	@Test
+	public void testDoubleCount() {
+		Counter testCounter = new Counter();
 
+		for(int i = 0; i < 5; i++) {
+			testCounter.increment();
+		}
+		testCounter.doubleCount();
+		assertEquals(testCounter.getCount(), 10);
+	}
 }
